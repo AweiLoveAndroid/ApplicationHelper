@@ -1,0 +1,2 @@
+# ApplicationHelper
+快速解耦Application的逻辑，教你实现Application的隔离型框架
