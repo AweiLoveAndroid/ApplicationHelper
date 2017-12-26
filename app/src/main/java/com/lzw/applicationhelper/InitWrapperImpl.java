@@ -15,13 +15,12 @@ public class InitWrapperImpl implements IInitWrapper{
     private String mVersionName = "3";
     public Context mContext;
 
-    private InitWrapperImpl(){
+    private InitWrapperImpl(){}
+
+    public static InitWrapperImpl getInstance(){
         if(mInstance == null){
             mInstance = new InitWrapperImpl();
         }
-    }
-
-    public static InitWrapperImpl getInstance(){
         return mInstance;
     }
 
