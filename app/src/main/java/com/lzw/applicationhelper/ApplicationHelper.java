@@ -19,13 +19,13 @@ public class ApplicationHelper implements IInitMethods{
     private static ApplicationHelper mInstance;
     private static InitWrapperImpl sInstance;
 
-    private ApplicationHelper(){
-        if(mInstance == null){
-            mInstance = new ApplicationHelper();
-        }
+    private ApplicationHelper() {
     }
 
-    public static ApplicationHelper init(Context context){
+    public static ApplicationHelper init(Context context) {
+        if (mInstance == null) {
+            mInstance = new ApplicationHelper();
+        }
         mContext = context;
         sInstance = InitWrapperImpl.getInstance();
         sInstance.init(mContext);
